@@ -27,11 +27,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114704390-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-114704390-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114704390-1');
     </script>
+
+
 
   </head>
 
@@ -132,7 +135,13 @@
             <div class="row">
               <div class="col-lg-12 text-center">
                   <p><p><br><br>
-                    <a href="http://vcgi.vermont.gov/" target='_blank' onClick="ga(‘send’, ‘event’, ‘VCGI Site’, ‘Click’, ‘Go to VCGI Site’);"><img src='img/blkVCGILogo.png'></a><br>
+                    <a href="http://vcgi.vermont.gov/" target='_blank' onClick="gtag('event', 'click', {
+                      'event_category': 'VCGI',
+                      'event_label': 'Logo To VCGI Site',
+                      'value': 1
+                      });">
+                      <img src='img/blkVCGILogo.png'>
+                    </a><br>
                 </div>
               </div>
             </div>
@@ -147,24 +156,23 @@
             </div>
             <div class="col-lg-12 text-center">
                   For the first time, this event will be bringing together over 200 professionals in the fields of geospatial technologies and data science for a full day of networking, seminars, and workshops. In order to help lower the cost for conference attendees, we are offering a limited number of sponsorship opportunities.<br><br>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/ZR3wRq" target='_blank'>Sponsorship Request</a><br><br>
-                View Sponsorship Levels <a href='doc/sponsorship.pdf' target='_blank' onClick="ga(‘send’, ‘event’, ‘Sponsors’, ‘Click’, ‘Get Sponsorship PDf’);">HERE</a><br><br>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/ZR3wRq" target='_blank' onClick="gtag('event', 'click', {
+                  'event_category': 'Sponsors',
+                  'event_label': 'Sponsorship Form',
+                  'value': 1
+                  });">Sponsorship Request</a><br><br>
+                View Sponsorship Levels <a href='doc/sponsorship.pdf' target='_blank' onClick="gtag('event', 'click', {
+                  'event_category': 'Sponsors',
+                  'event_label': 'Sponsorship Tiers',
+                  'value': 1
+                  });">HERE</a><br><br>
               </div>
         </div>
 <!--
         <div class="container">
           <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
-              <h3>Gold Level</h3><p>
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-              <h3>Silver Level</h3><p>
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
-              <h3>Bronze Level</h3><p>
-                <img class="img-fluid" src="img/sponsors/placeholder.png" alt="" width="200">
+              <h3>Sponsors</h3><p>
                 <img class="img-fluid" src="img/sponsors/generator.jpg" alt="" width="200">
                 <img class="img-fluid" src="img/sponsors/mainstreetlanding.jpg" alt="" width="200">
                 </div>
@@ -186,7 +194,11 @@
                   <strong>Free and Open to the Public</strong><br><br>
                   <h4>Registration Not Yet Open</h4>
 <!--
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://secure.vermont.gov/ACCD/eventreg/event.php?eid=84"  target='_blank'>Get Registered!</a><br>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://secure.vermont.gov/ACCD/eventreg/event.php?eid=84"  target='_blank' onClick="gtag('event', 'click', {
+                  'event_category': 'Registration',
+                  'event_label': 'Payment Gateway',
+                  'value': 1
+                });"">Get Registered!</a><br>
         -->
                 </div>
                 <div class="col-md-6 text-center">
@@ -197,7 +209,12 @@
 <!--
               <h3>Registration Not Yet Open</h3>
   -->
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://secure.vermont.gov/ACCD/eventreg/event.php?eid=84"  target='_blank' onClick="ga(‘send’, ‘event’, ‘Registration’, ‘Click’, ‘Go to Registration Site’);">Get Registered!</a><br>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://secure.vermont.gov/ACCD/eventreg/event.php?eid=84"  target='_blank'
+                onClick="gtag('event', 'click', {
+                  'event_category': 'Register',
+                  'event_label': 'Registration June 7',
+                  'value': 1
+                  });">Get Registered!</a><br>
                 <br><br>
                 </div>
               </div>
@@ -220,8 +237,11 @@
           <div class="row">
             <div class="col-md-12 text-left" id="day1">
               <h2>June 6th 6:30PM-8:30PM</h2><p>
-                Location: <a href="https://www.google.com/maps/place/Generator+makerspace/@44.4592448,-73.216063,15z/data=!4m5!3m4!1s0x0:0xf43a9eefb666989d!8m2!3d44.4592448!4d-73.216063?sa=X&ved=0ahUKEwjA3_qe9KDZAhXlYt8KHUhrCbIQ_BIIiAEwCg"
-                onClick="ga('send', 'event', {eventCategory: 'Outbound Link',  eventAction: 'click', eventLabel: event.target.href, transport: 'beacon'});">The Generator, 40 Sears Ln, Burlington, VT 05401</a><p>
+                Location: <a href="https://www.google.com/maps/place/Generator+makerspace/@44.4592448,-73.216063,15z/data=!4m5!3m4!1s0x0:0xf43a9eefb666989d!8m2!3d44.4592448!4d-73.216063?sa=X&ved=0ahUKEwjA3_qe9KDZAhXlYt8KHUhrCbIQ_BIIiAEwCg"  target='_blank' onClick="gtag('event', 'click', {
+                  'event_category': 'Directions',
+                  'event_label': 'Generator Location',
+                  'value': 1
+                  });">The Generator, 40 Sears Ln, Burlington, VT 05401</a><p>
                  </div>
                  <div class="col-md-12 text-center text-muted">
                   <h2><i>Schedule Coming Soon</i></h2><p><br>
@@ -260,7 +280,11 @@
             <div class="row">
               <div class="col-lg-12 text-left"  id="day2">
                 <h2>June 7th 9:00AM-4:30PM</h2><p>
-                  Location: <a href="https://www.google.com/maps/place/Main+Street+Landing+Performing+Arts+Center/@44.4769093,-73.2222624,17z/data=!4m12!1m6!3m5!1s0x4cca7af82edf7c39:0x2fcb3ea948bbde2c!2sFlynn+Center+for+the+Performing+Arts!8m2!3d44.475682!4d-73.2131557!3m4!1s0x0:0xa267a15d8391c342!8m2!3d44.4773309!4d-73.2196806">The Main Street Landing Performing Arts Center Lake & College Building, 60 Lake St, Burlington, VT 05401</a><p>
+                  Location: <a href="https://www.google.com/maps/place/Main+Street+Landing+Performing+Arts+Center/@44.4769093,-73.2222624,17z/data=!4m12!1m6!3m5!1s0x4cca7af82edf7c39:0x2fcb3ea948bbde2c!2sFlynn+Center+for+the+Performing+Arts!8m2!3d44.475682!4d-73.2131557!3m4!1s0x0:0xa267a15d8391c342!8m2!3d44.4773309!4d-73.2196806"  target='_blank'  onClick="gtag('event', 'click', {
+                    'event_category': 'Directions',
+                    'event_label': 'Main Street Location',
+                    'value': 1
+                    });">The Main Street Landing Performing Arts Center Lake & College Building, 60 Lake St, Burlington, VT 05401</a><p>
                   </div>
                   <div class="col-md-12 text-center text-muted">
                    <h2><i>Schedule Coming Soon</i></h2><p><br>
@@ -397,13 +421,19 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2>Interesting in presenting at this event?</h2><p>
+
+              <h1>Interested in Presenting at this event?</h1><p>
+
               <h3>Submit your proposed talk by April 1st by filling out the form!</h3><p>
                 </div>
                 </div>
             <div class="row">
               <div class="col-lg-12 text-center">
-              <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/orTX9u">Submit Proposal</a>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/orTX9u" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Speakers',
+                'event_label': 'Proposal Form',
+                'value': 1
+                });">Submit Proposal</a>
               </div>
 
 
@@ -465,26 +495,46 @@
           <div class="col-lg-12 mx-auto">
           <h3>Call for Volunteers</h3><br>
           Volunteers will help with registrations, monitor rooms, assist speakers and any other needs as they arise. In return for volunteering for half the day you will get free access to the event and a free lunch! If you are interested please complete the following form:<br><br>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/bbpifx" target="_blank">Volunteer Signup</a><p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://vcgi1.typeform.com/to/bbpifx" target="_blank" onClick="gtag('event', 'click', {
+            'event_category': 'Volunteer',
+            'event_label': 'Volunteer Form',
+            'value': 1
+            });">Volunteer Signup</a><p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-6 mx-auto text-left">
           <h2>June 6th 6:30PM-8:30PM</h2><p>
-            <b>Location:</b> <a href="https://www.google.com/maps/place/Generator+makerspace/@44.4592448,-73.216063,15z/data=!4m5!3m4!1s0x0:0xf43a9eefb666989d!8m2!3d44.4592448!4d-73.216063?sa=X&ved=0ahUKEwjA3_qe9KDZAhXlYt8KHUhrCbIQ_BIIiAEwCg" target='_blank'>The Generator, 40 Sears Ln, Burlington, VT 05401</a><p>
+            <b>Location:</b> <a href="https://www.google.com/maps/place/Generator+makerspace/@44.4592448,-73.216063,15z/data=!4m5!3m4!1s0x0:0xf43a9eefb666989d!8m2!3d44.4592448!4d-73.216063?sa=X&ved=0ahUKEwjA3_qe9KDZAhXlYt8KHUhrCbIQ_BIIiAEwCg" target='_blank' onClick="gtag('event', 'click', {
+              'event_category': 'Directions',
+              'event_label': 'Generator Location',
+              'value': 1
+              });">The Generator, 40 Sears Ln, Burlington, VT 05401</a><p>
             <b>Cost:</b> Free and Open to the Public<p>
-            There are many areas where GIS and data may be used not just for bussiness, research or governmental application. This event will be composed of four half-hour talks exploring on non-traditional applications of GIS and Data in creative fields.<p>
-            It is open to the general public and is held at <a href='https://generatorvt.com/' target='_blank'>The Generator</a> which is a combination of artist studios, classroom, and business incubator at the intersection of art, science, and technology.<p>
+            There are many areas where GIS and data may be used not just for business, research or governmental application. This event will be composed of four half-hour talks exploring on non-traditional applications of GIS and Data in creative fields.<p>
+            It is open to the general public and is held at <a href='https://generatorvt.com/' target='_blank' onClick="gtag('event', 'click', {
+              'event_category': 'Sponsors',
+              'event_label': 'Generator in Details Section',
+              'value': 1
+            });">The Generator</a> which is a combination of artist studios, classroom, and business incubator at the intersection of art, science, and technology.<p>
 
             <b>Parking:</b> Park on Sear's Lane or behind the Champlain College Miller Center on Lakeside Ave<br>
           </div>
           <div class="col-lg-6 mx-auto text-left">
             <h2>June 7th 9:00AM-4:30PM</h2><p>
-            <b>Location:</b> <a href="https://www.google.com/maps/place/Main+Street+Landing+Performing+Arts+Center/@44.4769093,-73.2222624,17z/data=!4m12!1m6!3m5!1s0x4cca7af82edf7c39:0x2fcb3ea948bbde2c!2sFlynn+Center+for+the+Performing+Arts!8m2!3d44.475682!4d-73.2131557!3m4!1s0x0:0xa267a15d8391c342!8m2!3d44.4773309!4d-73.2196806" target='_blank'>The Main Street Landing Performing Arts Center Lake & College Building, 60 Lake St, Burlington, VT 05401</a><p>
+            <b>Location:</b> <a href="https://www.google.com/maps/place/Main+Street+Landing+Performing+Arts+Center/@44.4769093,-73.2222624,17z/data=!4m12!1m6!3m5!1s0x4cca7af82edf7c39:0x2fcb3ea948bbde2c!2sFlynn+Center+for+the+Performing+Arts!8m2!3d44.475682!4d-73.2131557!3m4!1s0x0:0xa267a15d8391c342!8m2!3d44.4773309!4d-73.2196806" target='_blank' onClick="gtag('event', 'click', {
+              'event_category': 'Directions',
+              'event_label': 'Main Street Location',
+              'value': 1
+              });">The Main Street Landing Performing Arts Center Lake & College Building, 60 Lake St, Burlington, VT 05401</a><p>
             <b>Cost:</b> $65 Early Bird before April 15, $75 Regular Register <a class="js-scroll-trigger" href="#register">HERE</a><p>
 
 
-            A <a href="https://geodatsci.slack.com/open" target="_blank">Slack Channel</a> has been set up for participants, it is encouraged that you join the channel to be aware of any announcements and ask any questions you may have. Once you are registered you should receive and invite to the channel, if you do not please reach out through the email on the <a class="js-scroll-trigger" href="#contact">Contact</a> section of this site.<p>
+            A <a href="https://geodatsci.slack.com/open" target="_blank" onClick="gtag('event', 'click', {
+              'event_category': 'Slack',
+              'event_label': 'Slack Channel',
+              'value': 1
+              });">Slack Channel</a> has been set up for participants, it is encouraged that you join the channel to be aware of any announcements and ask any questions you may have. Once you are registered you should receive and invite to the channel, if you do not please reach out through the email on the <a class="js-scroll-trigger" href="#contact">Contact</a> section of this site.<p>
 
             Topics will cover big ideas, interesting projects and technical instruction in the fields of Geospatial Information Systems (GIS) and Data Science. Most talks will be 20 minutes with a 10 minute Q&A and transition.<p>
 
@@ -492,7 +542,17 @@
 
             <b>Food:</b> Breakfast snacks and a brown-bag lunch will be provided, if there are any dietary constraints reach out as soon as possible to the organizers on the Slack channel.<p>
 
-            <b>Parking:</b> There is no free parking for the venue, please review paid options for <a href="https://parkburlington.com/downtown-parking/parking-map/" target='_blank'>Burlington City Parking</a><p>
+
+            <b>Parking:</b> There is no free parking for the venue, please review paid options for <a href="https://parkburlington.com/downtown-parking/parking-map/" target='_blank' onClick="gtag('event', 'click', {
+              'event_category': 'Directions',
+              'event_label': 'Burlington Parking',
+              'value': 1
+            });">Burlington City Parking</a><p>
+              <div class="text-center">
+            <img src='img/parking.PNG'>
+            </div>
+            </div>
+
           </div>
         </div>
         <p>
@@ -518,12 +578,36 @@
           <div class=""><p><b>GeoDatSci Geospatial and Data Science Conference</b> was originaly called the <b>Geospatial Forum</b> and has been run for many years by the <b>Vermont Center for Geographic Information (VCGI)</b>. The change of the event name and the inclusion of Data Science themed talks was introduced in 2017 with the goal of bridging the two fields given the common interests and problems.</p>
               History of Events<br>
             <ul>
-              <li><a href="http://vcgi.vermont.gov/forum2017_descriptions" target="_blank"> 2017 Geospatial Forum</a></li>
-              <li><a href="http://vcgi.vermont.gov/geospatialforum_2016" target="_blank"> 2016 Geospatial Forum</a></li>
-              <li><a href="http://vcgi.vermont.gov/geospatialforum_2015" target="_blank"> 2015 Geospatial Forum</a></li>
-              <li><a href="http://vcgi.vermont.gov/events/06_11_2014_forum2014" target="_blank"> 2014 Geospatial Forum</a></li>
+              <li><a href="http://vcgi.vermont.gov/forum2017_descriptions" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Events',
+                'event_label': 'Previous Event 2017',
+                'value': 1
+              });"> 2017 Geospatial Forum</a></li>
+              <li><a href="http://vcgi.vermont.gov/geospatialforum_2016" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Events',
+                'event_label': 'Previous Event 2016',
+                'value': 1
+              });"> 2016 Geospatial Forum</a></li>
+              <li><a href="http://vcgi.vermont.gov/geospatialforum_2015" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Events',
+                'event_label': 'Previous Event 2015',
+                'value': 1
+              });"> 2015 Geospatial Forum</a></li>
+              <li><a href="http://vcgi.vermont.gov/events/06_11_2014_forum2014" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Events',
+                'event_label': 'Previous Event 2014',
+                'value': 1
+              });"> 2014 Geospatial Forum</a></li>
             </ul>
-          <p>The <a href="http://vcgi.vermont.gov/VCGI" target="_blank">Vermont Center for Geospatial Information</a> is your source for Vermont's geospatial data, information, and activities. VCGI is a division of the <a href="http://accd.vermont.gov/" target="_blank">Agency of Commerce and Community Development</a> charged by the State of Vermont with assisting the Vermont GIS community as well as anyone interested in geospatial technology or mapping.<p>
+          <p>The <a href="http://vcgi.vermont.gov/VCGI" target="_blank" onClick="gtag('event', 'click', {
+            'event_category': 'VCGI',
+            'event_label': 'About Section Go To VCGI',
+            'value': 1
+          });">Vermont Center for Geospatial Information</a> is your source for Vermont's geospatial data, information, and activities. VCGI is a division of the <a href="http://accd.vermont.gov/" target="_blank" onClick="gtag('event', 'click', {
+              'event_category': 'VCGI',
+              'event_label': 'About Section Go To ACCD',
+              'value': 1
+            });">Agency of Commerce and Community Development</a> charged by the State of Vermont with assisting the Vermont GIS community as well as anyone interested in geospatial technology or mapping.<p>
             </p>
             </div>
           </div>
@@ -532,10 +616,26 @@
           <div class="col-lg-12 mx-auto text-center">
 
             <p><h4>Connect with Us!</h4></p>
-              <a href="https://twitter.com/vcgi?lang=en" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
-              <a href="https://www.facebook.com/vermont.center.for.geographic.information/" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
-              <a href="https://medium.com/vermont-center-for-geographic-information" target="_blank"><i class="fa fa-medium fa-3x"></i></a>
-              <a href="https://github.com/vcgi"><i class="fa fa-github-square fa-3x" target="_blank"></i></a>
+              <a href="https://twitter.com/vcgi?lang=en" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Social',
+                'event_label': 'Twitter',
+                'value': 1
+              });"><i class="fa fa-twitter-square fa-3x"></i></a>
+              <a href="https://www.facebook.com/vermont.center.for.geographic.information/" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Social',
+                'event_label': 'Facebook',
+                'value': 1
+              });"><i class="fa fa-facebook-square fa-3x"></i></a>
+              <a href="https://medium.com/vermont-center-for-geographic-information" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Social',
+                'event_label': 'Medium',
+                'value': 1
+              });"><i class="fa fa-medium fa-3x"></i></a>
+              <a href="https://github.com/vcgi"><i class="fa fa-github-square fa-3x" target="_blank" onClick="gtag('event', 'click', {
+                'event_category': 'Social',
+                'event_label': 'Github',
+                'value': 1
+              });"></i></a>
           </div>
         </div>
         </div>
@@ -556,8 +656,16 @@
             <img img class="img-fluid" src="img/logoaccentd.png" alt="" width="80%" height="80%" >
           </div>
           <div class="col-md-8 col-lg-8 mx-auto text-left">
-            <p class="mb-5">Any questions about the event? Join us on our <a href="https://geodatsci.slack.com/open" target="_blank"><i class="fa fa-slack "></i>Slack Channel</a> and ask us any question.<p><p>
-            Or you can send us an email at <a href="mailto:accd.vcgiinfo@vermont.gov">accd.vcgiinfo@vermont.gov</a> and we will get back to you as soon as possible!
+            <p class="mb-5">Any questions about the event? Join us on our <a href="https://geodatsci.slack.com/open" target="_blank" onClick="gtag('event', 'click', {
+              'event_category': 'Slack',
+              'event_label': 'Slack Channel',
+              'value': 1
+              });"><i class="fa fa-slack "  ></i>Slack Channel</a> and ask us any question.<p><p>
+            Or you can send us an email at <a href="mailto:accd.vcgiinfo@vermont.gov"  target="_blank" onClick="gtag('event', 'click', {
+              'event_category': 'VCGI',
+              'event_label': 'Email Contact',
+              'value': 1
+              });">accd.vcgiinfo@vermont.gov</a> and we will get back to you as soon as possible!
             <p></p><br>
           </div>
         </div>
